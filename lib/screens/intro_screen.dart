@@ -13,18 +13,13 @@ class IntroScreen extends StatefulWidget {
 class _IntroScreenState extends State<IntroScreen> {
   PageDecoration pageDecoration = const PageDecoration(
     titleTextStyle: TextStyle(
-        fontSize: 28.0,
-        fontWeight: FontWeight.w700,
-        color: Colors.white), //tile font size, weight and color
+        fontSize: 28.0, fontWeight: FontWeight.w700, color: Colors.white),
     bodyTextStyle: TextStyle(fontSize: 19.0, color: Colors.white),
-    //body text size and color
     descriptionPadding: EdgeInsets.fromLTRB(16.0, 0.0, 16.0, 16.0),
-    //decription padding
-    imagePadding: EdgeInsets.all(20), //image padding
+    imagePadding: EdgeInsets.all(20),
   );
 
   Widget introImage(String assetName) {
-    //widget to show intro image
     return Align(
       child: SvgPicture.asset(assetName, width: 350.0),
       alignment: Alignment.bottomCenter,
@@ -36,8 +31,6 @@ class _IntroScreenState extends State<IntroScreen> {
         MaterialPageRoute(builder: (context) {
       return InitialScreen();
     }), (Route<dynamic> route) => false);
-    //Navigate to home page and remove the intro screen history
-    //so that "Back" button wont work.
   }
 
   @override
@@ -45,36 +38,28 @@ class _IntroScreenState extends State<IntroScreen> {
     return IntroductionScreen(
       key: UniqueKey(),
       globalBackgroundColor: Colors.deepOrangeAccent,
-      //main background of screen
       pages: [
-        //set your page view here
         PageViewModel(
-          title: "Fractional shares",
-          body:
-              "Instead of having to buy an entire share, invest any amount you want.",
+          title: "Page 1",
+          body: "Introduction to the ToDo app",
           image: introImage('assets/onboarding_1.svg'),
           decoration: pageDecoration,
         ),
         PageViewModel(
-          title: "Fractional shares",
-          body:
-              "Instead of having to buy an entire share, invest any amount you want.",
+          title: "Page 2",
+          body: "Introduction to the ToDo app",
           image: introImage('assets/onboarding_2.svg'),
           decoration: pageDecoration,
         ),
         PageViewModel(
-          title: "Fractional shares",
-          body:
-              "Instead of having to buy an entire share, invest any amount you want.",
+          title: "Page 3",
+          body: "Introduction to the ToDo app",
           image: introImage('assets/onboarding_3.svg'),
           decoration: pageDecoration,
         ),
-
-        //add more screen here
       ],
-
-      onDone: () => goHomepage(context), //go to home page on done
-      onSkip: () => goHomepage(context), // You can override on skip
+      onDone: () => goHomepage(context),
+      onSkip: () => goHomepage(context),
       showSkipButton: true,
       skipFlex: 0,
       nextFlex: 0,
@@ -91,12 +76,10 @@ class _IntroScreenState extends State<IntroScreen> {
         style: TextStyle(fontWeight: FontWeight.w600, color: Colors.white),
       ),
       dotsDecorator: const DotsDecorator(
-        size: Size(10.0, 10.0), //size of dots
-        color: Colors.white, //color of dots
+        size: Size(10.0, 10.0),
+        color: Colors.white,
         activeSize: Size(22.0, 10.0),
-        //activeColor: Colors.white, //color of active dot
         activeShape: RoundedRectangleBorder(
-          //shave of active dot
           borderRadius: BorderRadius.all(Radius.circular(25.0)),
         ),
       ),

@@ -59,7 +59,6 @@ class _InitialScreenState extends State<InitialScreen> {
         firstDate: DateTime(2015),
         lastDate: DateTime(2101));
     if (picked != null) {
-      print(picked);
       _selectTime(context);
       setState(() {
         selectedDate = picked;
@@ -128,7 +127,7 @@ class _InitialScreenState extends State<InitialScreen> {
                       children: [
                         SlidableAction(
                           onPressed: doNothing,
-                          icon: Icons.accessible_forward_sharp,
+                          icon: Icons.arrow_forward_outlined,
                           foregroundColor: Colors.green,
                           backgroundColor: Colors.black,
                         )
