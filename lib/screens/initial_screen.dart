@@ -15,13 +15,13 @@ class InitialScreen extends StatefulWidget {
 
 class _InitialScreenState extends State<InitialScreen> {
   List<ItemModel> item = [
-    ItemModel("Clients", false, null, false),
-    ItemModel("Designer", false, null, false),
-    ItemModel("Developer", false, null, false),
-    ItemModel("Worker", false, null, false),
-    ItemModel("Employee", false, null, false),
-    ItemModel("Manager", false, null, false),
-    ItemModel("Owner", false, null, false),
+    ItemModel("Go to gym", false, null, false),
+    ItemModel("Call Rakesh", false, null, false),
+    ItemModel("Buy groceries", false, null, false),
+    ItemModel("Call Service center", false, null, false),
+    ItemModel("Go to Salon", false, null, false),
+    ItemModel("Send money to Suresh", false, null, false),
+    ItemModel("Pay Rent money to Owner", false, null, false),
   ];
 
   bool newData = false;
